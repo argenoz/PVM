@@ -1,0 +1,16 @@
+#ifndef _PVM_RUNTIME_ANSWERS_
+#define _PVM_RUNTIME_ANSWERS_ 1
+
+#define _ALL_IS_GOOD 0
+
+#define _COMMAND_LINE_ERROR 1
+
+#define _BAD_COMMAND_ERROR 2
+
+#define _STACK_ERROR 3
+
+#define _BAD_ARGUMENT_ERROR 4
+
+#define _WRONG_REGISTER_ERROR 5
+
+#endif
