@@ -31,6 +31,7 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 	flg=0;
 	i=st_i;
 	k=0;
+	
 	commands =(BYTE*) actual->v;
 	while(1)
 		{
@@ -42,11 +43,16 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 				command = _HALT;
 			else
 			if(!(j=(flg>>2)))
+				{
 				command = commands[i];
+				
+				}
 			else
 				switch(j)
 				{
+					
 					case 1:
+					case 3:
 						{
 							command = _JMP;
 							break;
@@ -56,8 +62,15 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 							command=_ZJMP;
 							break;
 						}
+					case 4:
+						{
+							command=_CJMP;
+							break;
+						}
 					
 				}
+			//printf("",i);
+			printf("%d - i\t%d command\n",i,command);
 			if(command)
 			switch(command)
 				{
@@ -148,8 +161,20 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 									if(j!=0)
 										ans = _COMMAND_LINE_ERROR;
 									else
-										if((flg>>2)==1)
-											flg = (BYTE)( (flg&3)|(2<<2));
+										switch((flg>>2))
+											{
+												case 1:
+													{
+														flg = (BYTE)( (flg&3)|(2<<2));
+														break;
+													}
+												case 3:
+													{
+														flg = (BYTE)( (flg&3)|(4<<2));
+														break;
+													}
+												
+											}									
 								}
 							else
 								ans = _STACK_ERROR;
@@ -188,6 +213,29 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 						}
 					case _CJMP:
 						{
+							switch((flg>>2))
+								{
+									case 0:
+										{
+											if(ts[0])
+												if(k)
+													if(k-1)
+														if(k-2)
+															{
+																
+																
+																break;
+															}
+											ans = _STACK_ERROR;
+											break;
+										}
+									case 3:
+										{
+											
+											break;
+										}
+									
+								}
 							break;
 							
 						}
