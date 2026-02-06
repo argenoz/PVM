@@ -13,4 +13,6 @@
 
 #define _WRONG_REGISTER_ERROR 5
 
+#define _R_VALUE_OUT_BOUNDS 6
+
 #endif
