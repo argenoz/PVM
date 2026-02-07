@@ -36,7 +36,6 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 	commands =(BYTE*) actual->v;
 	while(1)
 		{
-			printf("_________\n");
 			if(flg&1)
 				break;
 			else
@@ -57,6 +56,7 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 							ts[1]=ts[0];
 							while(ts[1])
 								{
+									/*
 									do
 									{
 										if(k)
@@ -64,6 +64,7 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 										printf("\t%u\n",ts[1]->arr[k]);
 									}
 									while(k);
+									*/
 									ts[1]=ts[1]->n;
 									k = _PVM_STACK_MAX_BLOCK_SIZE_;
 								}
@@ -494,6 +495,94 @@ INTI pvm_execute(BS* actual, BS* x, BYTE st_i)
 										}
 								}
 							
+							break;
+						}
+					case _NOT:
+						{
+							if(ts[0])
+								{
+									j = ~(ts[0]->arr[k]);
+									if((k=k+1)==_PVM_STACK_MAX_BLOCK_SIZE_)
+										{
+											_newTS(ts[1]);
+											ts[1]->n=ts[0];
+											ts[0]=ts[1];
+											k=0;
+										}
+									ts[0]->arr[k]=j;
+								}
+							else 
+								ans = _STACK_ERROR;
+							break;
+						}
+						
+					case _AND:
+						{
+							
+							if(ts[0])
+								if(k)
+									j = (BYTE)((ts[0]->arr[k])&(ts[0]->arr[k-1]));
+								else
+									if(ts[0]->n)
+										j = (BYTE)((ts[0]->arr[k])&(ts[0]->n->arr[_PVM_STACK_MAX_BLOCK_SIZE_-1]));
+									else 
+										ans = _STACK_ERROR;
+							else
+								ans = _STACK_ERROR;
+							if(!ans)
+								{
+									if((k=k+1)==_PVM_STACK_MAX_BLOCK_SIZE_)
+										{
+											_newTS(ts[1]);
+											ts[1]->n=ts[0];
+											ts[0]=ts[1];
+											k=0;
+										}
+									ts[0]->arr[k]=j;
+								}
+							break;
+						}
+					case _LSHIFT:
+					
+						{
+							if(ts[0])
+								{
+									j = ((ts[0]->arr[k])<<1);
+									/*
+									if(command == _LSHIFT)
+										j = (j<<1);
+									else
+										j = (j>>1);
+									*/
+									if((k=k+1)==_PVM_STACK_MAX_BLOCK_SIZE_)
+										{
+											_newTS(ts[1]);
+											ts[1]->n=ts[0];
+											ts[0]=ts[1];
+											k=0;
+										}
+									ts[0]->arr[k]=j;
+								}
+							else 
+								ans = _STACK_ERROR;
+							break;
+						}
+					case _RSHIFT:
+						{
+							if(ts[0])
+								{
+									j = ((ts[0]->arr[k])>>1);
+									if((k=k+1)==_PVM_STACK_MAX_BLOCK_SIZE_)
+										{
+											_newTS(ts[1]);
+											ts[1]->n=ts[0];
+											ts[0]=ts[1];
+											k=0;
+										}
+									ts[0]->arr[k]=j;
+								}
+							else 
+								ans = _STACK_ERROR;
 							break;
 						}
 					
