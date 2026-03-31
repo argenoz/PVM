@@ -1,7 +1,12 @@
 #ifndef _PVM_BASE_STRUCTS
 #define _PVM_BASE_STRUCTS 1
 
+#define _MAX_STACK_SIZE_ 20
 
+#define _MAX_HEAP_SIZE_ 128
+
+
+#define _MIN_HEAP_SIZE_ 4
 
 
 #define _PVM_REGISTER_ARRAY_SIZE_ 16
