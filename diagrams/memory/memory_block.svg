@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="14cm" height="4cm" viewBox="-289 170 277 65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-287.406" y="171.977" width="274.718" height="62"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-287.406" y="171.977" width="274.718" height="62"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-150.047" y="206.877">
+      <tspan x="-150.047" y="206.877"></tspan>
+    </text>
+  </g>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-243.64" y="206.538">
+    <tspan x="-243.64" y="206.538"></tspan>
+  </text>
+  <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="-256.89" y="202.538">
+    <tspan x="-256.89" y="202.538"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="-275.49" y="184.038" width="52.7" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-275.49" y="184.038" width="52.7" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-249.14" y="206.938">
+      <tspan x="-249.14" y="206.938">flags</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-218.64" y="184.638" width="52.7" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-218.64" y="184.638" width="52.7" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-192.29" y="207.538">
+      <tspan x="-192.29" y="207.538">type</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-118.377" y="184.958" width="100.6" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-118.377" y="184.958" width="100.6" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-68.0772" y="207.858">
+      <tspan x="-68.0772" y="207.858">the_innerish</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-161.379" y="184.719" width="36.852" height="38"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-161.379" y="184.719" width="36.852" height="38"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="-142.953" y="207.619">
+      <tspan x="-142.953" y="207.619">id</tspan>
+    </text>
+  </g>
+</svg>
